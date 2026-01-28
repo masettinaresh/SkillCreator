@@ -37,4 +37,4 @@ graph TD
 3.  **Deploy**: Copy the generated output into your `.agent/skills/` directory.
 
 ---
-*Created by [Prrammod Dutta](https://github.com/masettinaresh)*
+*Created by Naresh Masetti (https://github.com/masettinaresh)*
