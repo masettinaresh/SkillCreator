@@ -2430,6 +2430,15 @@
     "source": "unknown"
   },
   {
+    "id": "interviewing-qa-leaders",
+    "path": "skills\\interviewing-qa-leaders",
+    "category": "uncategorized",
+    "name": "interviewing-qa-leaders",
+    "description": "Prepares users for Senior/Principal QA Leadership interviews. Features domain-specific question banks for Guidewire/Banking, STAR method coaching, and architectural challenge simulations. Use when the user mentions interview prep, career advancement, or mock interviews.",
+    "risk": "unknown",
+    "source": "unknown"
+  },
+  {
     "id": "ios-developer",
     "path": "skills\\ios-developer",
     "category": "uncategorized",

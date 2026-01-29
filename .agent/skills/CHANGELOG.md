@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **New Skill**: `linkedin-enhancer` - Optimizes LinkedIn profile content for job roles and SEO.
 - **New Skill**: `creating-linkedin-posts` - Optimized social media content creator for LinkedIn.
 - **New Skill**: `deploying-linkedin-profile` - Automated browser-based LinkedIn profile updater.
+- **New Skill**: `interviewing-qa-leaders` - Mock interview and STAR coaching for Senior QA roles.
 - **New Skill**: `resume-builder` - ATS-friendly resume generator.
 
 ### Changed
