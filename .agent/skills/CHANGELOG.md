@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [4.1.0] - 2026-01-30 - "The LinkedIn Era"
+
+### Added
+- **New Skill**: `linkedin-enhancer` - Optimizes LinkedIn profile content for job roles and SEO.
+- **New Skill**: `creating-linkedin-posts` - Optimized social media content creator for LinkedIn.
+- **New Skill**: `resume-builder` - ATS-friendly resume generator.
+
+### Changed
+- **Catalog System**: Updated `CATALOG.md` and `data/skills_index.json` to include the newest skills.
+- **Organization**: Standardized skill placement within the `skills/` directory.
 
 ---
 
