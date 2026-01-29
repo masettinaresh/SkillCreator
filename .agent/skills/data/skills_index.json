@@ -1485,6 +1485,15 @@
     "source": "unknown"
   },
   {
+    "id": "deploying-linkedin-profile",
+    "path": "skills\\deploying-linkedin-profile",
+    "category": "uncategorized",
+    "name": "deploying-linkedin-profile",
+    "description": "Automates the deployment of professional content to a LinkedIn profile. Updates headlines, about sections, and experience details using browser automation. Use when the user wants to 'push', 'save', or 'update' their profile directly.",
+    "risk": "unknown",
+    "source": "unknown"
+  },
+  {
     "id": "deployment-engineer",
     "path": "skills\\deployment-engineer",
     "category": "uncategorized",
