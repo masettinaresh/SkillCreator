@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naresh Masetti - Senior Test Lead Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #64748b;
+            --accent: #0ea5e9;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --sidebar-width: 300px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding: 40px 0;
+        }
+
+        @media print {
+            body { padding: 0; background-color: white; }
+            .no-print { display: none; }
+            .resume-container { box-shadow: none !important; margin: 0 !important; width: 100% !important; max-width: none !important; }
+        }
+
+        .resume-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            display: flex;
+            min-height: 29.7cm; /* A4 Ratio */
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 40px 30px;
+            flex-shrink: 0;
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .title {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+
+        .contact-item svg {
+            width: 16px;
+            height: 16px;
+            color: var(--accent);
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+
+        .contact-item a:hover { opacity: 1; color: var(--accent); }
+
+        .sidebar-section {
+            margin-top: 40px;
+        }
+
+        .sidebar-section h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            color: var(--accent);
+        }
+
+        .skill-group {
+            margin-bottom: 15px;
+        }
+
+        .skill-group h4 {
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 5px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skill-tag {
+            background: rgba(255,255,255,0.1);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .cert-item {
+            margin-bottom: 12px;
+            font-size: 12px;
+        }
+
+        .cert-check {
+            color: #22c55e;
+            margin-right: 6px;
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            flex-grow: 1;
+            padding: 50px 40px;
+        }
+
+        .summary {
+            margin-bottom: 35px;
+            font-size: 14px;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .section-header .line {
+            flex-grow: 1;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary) 0%, transparent 100%);
+            opacity: 0.2;
+        }
+
+        .experience-item {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+
+        .exp-role {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--primary);
+        }
+
+        .exp-company {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--text-main);
+        }
+
+        .exp-date {
+            font-size: 12px;
+            font-weight: 500;
+            color: white;
+            background: var(--primary);
+            padding: 2px 10px;
+            border-radius: 20px;
+        }
+
+        .project-item {
+            margin-top: 15px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .project-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-main);
+            margin-bottom: 2px;
+        }
+
+        .project-client {
+            font-size: 12px;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .tech-pill {
+            display: inline-block;
+            font-size: 11px;
+            background: #f1f5f9;
+            color: var(--primary);
+            padding: 1px 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .exp-list {
+            list-style: none;
+            margin-top: 8px;
+        }
+
+        .exp-list li {
+            position: relative;
+            padding-left: 18px;
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+
+        .exp-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .achievement-card {
+            background: #f8fafc;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .achievement-card p {
+            font-size: 12px;
+            color: var(--text-light);
+            line-height: 1.4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <h1 class="name">NARESH VENKATASIVA MASETTI</h1>
+                <p class="title">Senior Test Lead</p>
+                
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <span>+91 9701139868</span>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <a href="mailto:naresh.masetti@gmail.com">Email Me</a>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    <a href="https://linkedin.com/in/naresh-masetti" target="_blank">LinkedIn Profile</a>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Technical Skills</h3>
+                <div class="skill-group">
+                    <h4>Automation Tools</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Selenium</span>
+                        <span class="skill-tag">Appium</span>
+                        <span class="skill-tag">Playwright</span>
+                        <span class="skill-tag">HP UFT</span>
+                        <span class="skill-tag">Cucumber</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4>Management & CI</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Zephyr</span>
+                        <span class="skill-tag">Bitbucket</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4>Programming</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">BDD</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Certifications</h3>
+                <div class="cert-item"><span class="cert-check">✓</span> AWS Cloud Practitioner (2023)</div>
+                <div class="cert-item"><span class="cert-check">✓</span> ISTQB Foundation Level</div>
+                <div class="cert-item"><span class="cert-check">✓</span> ISTQB Test Automation</div>
+                <div class="cert-item"><span class="cert-check">✓</span> Certified Scrum Master</div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Education</h3>
+                <div style="font-size: 13px;">
+                    <p style="font-weight: 600;">B.Tech in CSE</p>
+                    <p style="opacity: 0.8;">Narasaraopet Engineering College</p>
+                    <p style="font-size: 11px; opacity: 0.6;">Graduated: 2009</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="summary">
+                Senior Test Lead with <strong>15+ years of progressive experience</strong> in software testing, automation, and QA leadership. Expert in building scalable automation frameworks (Selenium, BDD) and CI/CD pipelines. Proven track record in leading cross-functional teams and delivering high-quality solutions for Insurance and Banking sectors.
+            </section>
+
+            <div class="section-header">
+                <h2>Experience</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-role">Senior Test Lead</span>
+                    <span class="exp-date">2016 - Present</span>
+                </div>
+                <div class="exp-company">ValueMomentum</div>
+                
+                <div class="project-item">
+                    <div class="project-title">Erie Guidewire Claims Center</div>
+                    <div class="project-client">Erie Insurance | Sept 2024 - Present</div>
+                    <div class="tech-pill">Selenium WebDriver</div><div class="tech-pill">Guidewire</div>
+                    <ul class="exp-list">
+                        <li>Designed and maintained scalable automation frameworks for Guidewire testing.</li>
+                        <li>Delivered actionable insights through metrics-driven reports to senior stakeholders.</li>
+                        <li>Improved test coverage by 30% through process optimization.</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Customer Information Management</div>
+                    <div class="project-client">Erie Insurance | 2022 - 2024</div>
+                    <div class="tech-pill">BDD</div><div class="tech-pill">API Testing</div><div class="tech-pill">MarkLogic</div>
+                    <ul class="exp-list">
+                        <li>Architected BDD frameworks for API testing, facilitating behavior-driven cycles.</li>
+                        <li>Mentored 10+ junior engineers and established robust code review standards.</li>
+                        <li>Integrated automation into CI/CD pipelines for continuous regression.</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">EDGE Project</div>
+                    <div class="project-client">Geico Insurance | 2021 - 2022</div>
+                    <div class="tech-pill">Duck Creek</div><div class="tech-pill">Agile</div>
+                    <ul class="exp-list">
+                        <li>Developed automation strategies aligned with Agile delivery cycles.</li>
+                        <li>Led execution efforts resulting in measurable automation outcomes.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2>Key Achievements</h2>
+                <div class="line"></div>
+            </div>
+            
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <p><strong>40% Reduction in Testing Time</strong> through the implementation of scalable automation frameworks.</p>
+                </div>
+                <div class="achievement-card">
+                    <p><strong>15+ Enterprise Projects</strong> successfully led across Insurance and Banking domains.</p>
+                </div>
+                <div class="achievement-card">
+                    <p><strong>100% On-time Delivery</strong> maintained across high-stakes client engagements.</p>
+                </div>
+                <div class="achievement-card">
+                    <p><strong>Mentorship</strong> of 10+ automation engineers into senior leadership roles.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; border-top: 1px solid #e2e8f0; padding-top: 15px; text-align: center;">
+                <p style="font-size: 11px; color: var(--text-light); font-style: italic;">References available upon request</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

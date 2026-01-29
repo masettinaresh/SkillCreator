@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naresh Masetti - Minimalist Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-main: #111827;
+            --text-muted: #4b5563;
+            --text-light: #9ca3af;
+            --border: #e5e7eb;
+            --accent: #2563eb;
+            --bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 50px 0;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background-color: white;
+            }
+
+            .resume-page {
+                box-shadow: none !important;
+                margin: 0 !important;
+                border: none !important;
+                border-radius: 0 !important;
+                width: 100% !important;
+                max-width: none !important;
+            }
+        }
+
+        .resume-page {
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--bg);
+            padding: 60px 70px;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--text-main);
+            padding-bottom: 20px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            text-transform: uppercase;
+        }
+
+        .role-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+        }
+
+        .contact-info span::after {
+            content: "|";
+            margin-left: 15px;
+            color: var(--border);
+        }
+
+        .contact-info span:last-child::after {
+            content: "";
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        .exp-item {
+            margin-bottom: 25px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 2px;
+        }
+
+        .exp-subhead {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .project-block {
+            margin-top: 12px;
+            margin-left: 10px;
+            border-left: 1px solid var(--border);
+            padding-left: 15px;
+            margin-bottom: 15px;
+        }
+
+        .project-meta {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tech-stack {
+            font-size: 11px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            position: relative;
+            padding-left: 15px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 3px;
+        }
+
+        li::before {
+            content: "–";
+            position: absolute;
+            left: 0;
+            color: var(--text-light);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 30px;
+        }
+
+        .skill-category {
+            font-size: 13px;
+        }
+
+        .skill-category strong {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .certs-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 20px;
+        }
+
+        .cert-item {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        p.summary {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-page">
+        <header>
+            <div class="header-top">
+                <h1>Naresh Masetti</h1>
+                <span class="role-title">Senior Test Lead</span>
+            </div>
+            <div class="contact-info">
+                <span>+91 9701139868</span>
+                <span>naresh.masetti@gmail.com</span>
+                <span>linkedin.com/in/naresh-masetti</span>
+                <span>Hyderabad, India</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>Summary</h2>
+            <p class="summary">
+                Senior Test Lead with 15+ years of experience in software testing and QA leadership. Expert in Selenium,
+                BDD, and CI/CD integration. AWS Cloud Practitioner and Certified Scrum Master dedicated to delivering
+                high-quality automation solutions for enterprise-scale insurance and banking platforms.
+            </p>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span>ValueMomentum</span>
+                    <span>2016 – Present</span>
+                </div>
+                <div class="exp-subhead">
+                    <span>Senior Test Lead</span>
+                </div>
+
+                <div class="project-block">
+                    <div class="project-meta">
+                        <span>Erie Guidewire Claims Center</span>
+                        <span>Sept 2024 – Present</span>
+                    </div>
+                    <div class="tech-stack">Selenium WebDriver, Guidewire</div>
+                    <ul>
+                        <li>Architected scalable automation frameworks for Guidewire environment.</li>
+                        <li>Delivered performance metrics and defect analysis reports to key stakeholders.</li>
+                    </ul>
+                </div>
+
+                <div class="project-block">
+                    <div class="project-meta">
+                        <span>Customer Information Management</span>
+                        <span>2022 – 2024</span>
+                    </div>
+                    <div class="tech-stack">BDD, API Testing, MarkLogic</div>
+                    <ul>
+                        <li>Led BDD framework design for comprehensive API validation.</li>
+                        <li>Mentored 10+ junior engineers and enforced strict code review protocols.</li>
+                        <li>Integrated automated suites into CI/CD pipelines reaching 80%+ coverage.</li>
+                    </ul>
+                </div>
+
+                <div class="project-block">
+                    <div class="project-meta">
+                        <span>EDGE / Geico Insurance</span>
+                        <span>2021 – 2022</span>
+                    </div>
+                    <div class="tech-stack">Duck Creek, Agile</div>
+                    <ul>
+                        <li>Defined enterprise test strategies for major cloud migration project.</li>
+                        <li>Coordinated with product owners to ensure quality milestones in Agile sprints.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp-item" style="margin-top: -10px;">
+                <div class="exp-header">
+                    <span>Zenmonics Inc.</span>
+                    <span>2013 – 2016</span>
+                </div>
+                <div class="exp-subhead">
+                    <span>Software Test Engineer</span>
+                </div>
+                <div class="project-block">
+                    <div class="project-meta">
+                        <span>Treasury Management / Jack Henry</span>
+                        <span>2015 – 2016</span>
+                    </div>
+                    <div class="tech-stack">Selenium, Jenkins</div>
+                    <ul>
+                        <li>Automated 500+ manual regression cases using Selenium and Java.</li>
+                        <li>Established regression testing protocols via Jenkins CI.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category"><strong>Automation:</strong> Selenium, Appium, Playwright, UFT</div>
+                <div class="skill-category"><strong>Tools:</strong> Jira, Zephyr, eazyBI, HP ALM</div>
+                <div class="skill-category"><strong>DevOps:</strong> Jenkins, Git, Bitbucket, GitLab</div>
+                <div class="skill-category"><strong>Process:</strong> Agile, Scrum, BDD, Test Planning</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications</h2>
+            <div class="certs-list">
+                <span class="cert-item">AWS Certified Cloud Practitioner</span>
+                <span class="cert-item">ISTQB Foundation & Test Automation</span>
+                <span class="cert-item">Certified Scrum Master</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="exp-header">
+                <span style="font-weight: 500;">B.Tech in Computer Science</span>
+                <span>2009</span>
+            </div>
+            <div class="exp-subhead">Narasaraopet Engineering College</div>
+        </section>
+    </div>
+</body>
+
+</html>
